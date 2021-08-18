@@ -2,6 +2,7 @@
 const previousButton = document.querySelector('.previous-btn');
 const nextButton = document.querySelector('.next-btn');
 const textCaption = document.querySelector('.text-caption');
+const dot = document.querySelectorAll('.dot');
 
 const slides = document.querySelectorAll('.carousel-images');
 const totalSlides = slides.length;
@@ -20,6 +21,7 @@ function hideAllSlides() {
     for(let slide of slides) {
         slide.classList.remove('carousel-visible');
         slide.classList.add('carousel-hidden');
+        dot[currentSlide].classList.remove('dot-highlighted');
     }
 }
 
@@ -33,6 +35,8 @@ function previousImage() {
     }
     slides[currentSlide].classList.add('carousel-visible');
     textCaption.textContent =  textArray[currentSlide];
+    dot[currentSlide].classList.add('dot-highlighted');
+
 }
 
 function nextImage() {
@@ -45,4 +49,5 @@ function nextImage() {
     }
     slides[currentSlide].classList.add('carousel-visible');
     textCaption.textContent =  textArray[currentSlide];
+    dot[currentSlide].classList.add('dot-highlighted');
 }
