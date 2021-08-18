@@ -13,16 +13,25 @@ nextButton.addEventListener('click', nextImage);
 // Functions
 function hideAllSlides() {
     for(let slide of slides) {
-        slide[currentSlide].classList.remove('carousel-visible');
-        slide[currentSlide].classList.add('carousel-hidden');
+        slide.classList.remove('carousel-visible');
+        slide.classList.add('carousel-hidden');
     }
 }
 
 function previousImage() {
-    console.log('clicked');
+    hideAllSlides();
+
+    if(currentSlide === 0) {
+        currentSlide = totalSlides - 1;
+    } else {
+        currentSlide--;
+    }
+    slides[currentSlide].classList.add('carousel-visible');
 }
 
 function nextImage() {
+    hideAllSlides();
+
     if(currentSlide === totalSlides - 1) {
         currentSlide = 0;
     } else {
