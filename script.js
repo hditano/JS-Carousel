@@ -3,7 +3,7 @@ const previousButton = document.querySelector('.previous-btn');
 const nextButton = document.querySelector('.next-btn');
 
 const slides = document.querySelectorAll('.carousel-images');
-const totalSlides = 3;
+const totalSlides = slides.length;
 let currentSlide = 0;
 
 // Event Listeners
@@ -13,7 +13,7 @@ nextButton.addEventListener('click', nextImage);
 // Functions
 function hideAllSlides() {
     for(let slide of slides) {
-        slide.classList.remove('carousel-visible');
+        slide[currentSlide].classList.remove('carousel-visible');
     }
 }
 
@@ -22,10 +22,10 @@ function previousImage() {
 }
 
 function nextImage() {
-    if(slides === totalSlides - 1) {
+    if(currentSlide === totalSlides - 1) {
         currentSlide = 0;
     } else {
-        slides[currentSlide].classList.add('carousel-visible');
         currentSlide++
     }
+    slides[currentSlide].classList.add('carousel-visible');
 }
