@@ -14,6 +14,7 @@ nextButton.addEventListener('click', nextImage);
 function hideAllSlides() {
     for(let slide of slides) {
         slide[currentSlide].classList.remove('carousel-visible');
+        slide[currentSlide].classList.add('carousel-hidden');
     }
 }
 
