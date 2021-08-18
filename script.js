@@ -13,6 +13,8 @@ const textArray = ['The Joker', 'Baby Driver', 'The Weird Chinese Man'];
 previousButton.addEventListener('click', previousImage);
 nextButton.addEventListener('click', nextImage);
 
+textCaption.textContent =  textArray[currentSlide];
+
 // Functions
 function hideAllSlides() {
     for(let slide of slides) {
