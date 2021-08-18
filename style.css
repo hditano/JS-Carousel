@@ -19,6 +19,14 @@ button {
     opacity: 0.8;
 }
 
+.text-caption {
+    position: absolute;
+    top: 48%;
+    width: 100%;
+    padding: 0 450px;
+    color: #FFF;
+}
+
 .previous-btn {
     margin-left: 190px;
 }

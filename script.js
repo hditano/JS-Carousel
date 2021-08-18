@@ -1,10 +1,13 @@
 // Variables
 const previousButton = document.querySelector('.previous-btn');
 const nextButton = document.querySelector('.next-btn');
+const textCaption = document.querySelector('.text-caption');
 
 const slides = document.querySelectorAll('.carousel-images');
 const totalSlides = slides.length;
 let currentSlide = 0;
+
+const textArray = ['The Joker', 'Baby Driver', 'The Weird Chinese Man'];
 
 // Event Listeners
 previousButton.addEventListener('click', previousImage);
@@ -27,6 +30,7 @@ function previousImage() {
         currentSlide--;
     }
     slides[currentSlide].classList.add('carousel-visible');
+    textCaption.textContent =  textArray[currentSlide];
 }
 
 function nextImage() {
@@ -38,4 +42,5 @@ function nextImage() {
         currentSlide++
     }
     slides[currentSlide].classList.add('carousel-visible');
+    textCaption.textContent =  textArray[currentSlide];
 }
