@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background: gray;
+    max-width: 640px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+button {
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+.carousel-images {
+    display: none;
+}
+
+.carousel-visible {
+    display: block;
+}
